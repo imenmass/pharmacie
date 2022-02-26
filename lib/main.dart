@@ -9,14 +9,18 @@ import 'package:pharmacie/screens/add_patient.dart';
 import 'package:pharmacie/screens/add_medicament.dart';
 import 'package:pharmacie/screens/add_ordonnance.dart';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.black.withOpacity(0),
     statusBarIconBrightness: Brightness.dark,
   ));
+  
   runApp(const MyApp());
 }
 

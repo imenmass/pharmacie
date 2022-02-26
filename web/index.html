@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -14,6 +15,8 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
+  <meta name="google-signin-client_id"
+    content="***********-*************.apps.googleusercontent.com">
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -29,10 +32,16 @@
   <title>pharmacie</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+       <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
@@ -97,26 +106,28 @@
       loadMainDartJs();
     }
   </script>
-            <script>
-              // Import the functions you need from the SDKs you need
-            import { initializeApp } from "firebase/app";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
+  <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyDAA3ju94O-rIlXWFIsZbw2Zt9Nt_cjNbQ",
-              authDomain: "pharmacie-ad2e2.firebaseapp.com",
-              projectId: "pharmacie-ad2e2",
-              storageBucket: "pharmacie-ad2e2.appspot.com",
-              messagingSenderId: "601773482523",
-              appId: "1:601773482523:web:9e17b54692d7afe4720ebe"
-            };
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAA3ju94O-rIlXWFIsZbw2Zt9Nt_cjNbQ",
+      authDomain: "pharmacie-ad2e2.firebaseapp.com",
+      projectId: "pharmacie-ad2e2",
+      storageBucket: "pharmacie-ad2e2.appspot.com",
+      messagingSenderId: "601773482523",
+      appId: "1:601773482523:web:9e17b54692d7afe4720ebe"
+    };
 
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            </script>
-
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  
+  </script>
+  
 
 </body>
+
 </html>
