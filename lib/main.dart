@@ -10,6 +10,7 @@ import 'package:pharmacie/screens/add_medicament.dart';
 import 'package:pharmacie/screens/add_ordonnance.dart';
 
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
