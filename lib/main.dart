@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pharmacie/screens/pharmacien.dart';
@@ -11,8 +12,20 @@ import 'package:pharmacie/screens/add_ordonnance.dart';
 
 
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp
+    (
+    
+  options: FirebaseOptions(
+  apiKey: "AIzaSyDAA3ju94O-rIlXWFIsZbw2Zt9Nt_cjNbQ",
+  authDomain: "pharmacie-ad2e2.firebaseapp.com",
+  projectId: "pharmacie-ad2e2",
+  storageBucket: "pharmacie-ad2e2.appspot.com",
+  messagingSenderId: "601773482523",
+  appId: "1:601773482523:web:9e17b54692d7afe4720ebe"
+    ),
+  );
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.black.withOpacity(0),
     statusBarIconBrightness: Brightness.dark,
